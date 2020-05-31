@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+  <head>
+    <meta charset="UTF-8">
+    <title>Transition Animation</title>
+    <style type="text/css">
+
+    h1 {
+      color:black;
+      background-color: #CCFF99;
+      font-size: 2em;
+      transition:1s ease-in;
+      text-align:center;
+    }
+
+    h1:hover{
+      color:red;
+    }
+
+    h2 {
+      color:black;
+      font-size:500;
+      text-shadow:5px 6px 2px silver;
+      text-align:center;
+    }
+
+    h2:hover {
+      color:red;
+    }
+
+    h3 {
+      color:yellow;
+      font-size:400%;
+      -webkit-text-stroke:2px red;
+      text-align: center;
+      -webkit-box-reflect:below 2px;
+      -webkit-linear-gradient(bottom, white, transparent, 49%, transparent);
+    }
+
+    h3:hover {
+      color:gold;
+    }
+
+    h4 {
+      color:white;
+      font-size:400%;
+      -webkit-text-stroke:2px red;
+      text-align: center;
+      -webkit-box-reflect:below 2px;
+    }
+
+    h4:hover {
+      color:yellow
+    }
+
+     #box {
+       transition:all 1s ease-in;
+       height:100px;
+       width: 100px;
+       background-color: peachpuff;
+       color:red;
+       border:1px solid black;
+     }
+
+     #box:hover {
+       transform:rotate(360deg);
+       -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+       -ms-transform: rotate(360deg);
+     }
+
+     @keyframes anim {
+       0% {left:0px, top:0px;
+       }
+
+       25% {left:100px, top:0px;
+
+       50% {left:100px,top:100px;
+       }
+
+       75% {left:0px, top:100px;
+       }
+
+       100% {left:0px, top:0px;
+       }
+       }
+
+     /* Animation Mechanism */
+     #box1 {
+       position:absolute;
+       height:100px;
+       width:100px;
+       opacity:.9;
+       background-color:pink;
+       border:3px solid black;
+       animation:anim 5s linear;
+     }
+
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Transition Demo</h1>
+    <div id="box">
+      <p>Box</p>
+    </div>
+    <div id="box1">box1</div>
+
+    <h2>HAPPY BIRTHDAY TO YOU! HAPPY BIRTHDAY TO YOU!</h2>
+    <h3>LOVE CHRIST</h3>
+    <h4>CHRIST IS THE KING</h4>
+  </body>
+</html>
